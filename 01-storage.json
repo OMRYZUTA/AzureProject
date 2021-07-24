@@ -1,0 +1,31 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {},
+    "functions": [],
+    "variables": {},
+    "resources": [
+        {
+            "name": "storageaccount13579zuta",
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "location": "[resourceGroup().location]",
+            "kind": "StorageV2",
+            "sku": {
+                "name": "Standard_GRS"
+            }
+        },
+        {
+            "type": "Microsoft.Storage/storageAccounts",
+            "apiVersion": "2019-06-01",
+            "name": "storageaccount02468zuta",
+            "location": "[resourceGroup().location]",
+            "sku": {
+                "name": "Standard_GRS"
+            },
+            "kind": "StorageV2"
+        }
+
+    ],
+    "outputs": {}
+}
